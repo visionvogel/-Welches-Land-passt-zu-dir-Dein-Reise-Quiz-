@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welches Land passt zu dir?</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welches Land passt zu dir?</h1>
+      <div id="nameInput">
+        <p>Wie heißt du?</p>
+        <input type="text" id="userName" placeholder="Dein Name" />
+        <button onclick="startQuiz()">Start</button>
+      </div>
+
+      <form id="quizForm" style="display: none">
+        <div class="question" id="question1">
+          <p>1. Was bevorzugst du?</p>
+          <label
+            ><input type="radio" name="frage1" value="natur" /> Natur</label
+          >
+          <label
+            ><input type="radio" name="frage1" value="stadt" />
+            Stadtleben</label
+          >
+          <button type="button" onclick="nextQuestion(2)">Weiter</button>
+        </div>
+
+        <div class="question" id="question2">
+          <p>2. Magst du warmes oder kaltes Wetter?</p>
+          <label><input type="radio" name="frage2" value="warm" /> Warm</label>
+          <label><input type="radio" name="frage2" value="kalt" /> Kalt</label>
+          <button type="button" onclick="nextQuestion(3)">Weiter</button>
+        </div>
+
+        <div class="question" id="question3">
+          <p>3. Welche Art von Essen bevorzugst du?</p>
+          <label
+            ><input type="radio" name="frage3" value="asiatisch" /> Asiatische
+            Küche</label
+          >
+          <label
+            ><input type="radio" name="frage3" value="europaeisch" />
+            Europäische Küche</label
+          >
+          <label
+            ><input type="radio" name="frage3" value="suedamerika" />
+            Südamerikanische Küche</label
+          >
+          <button type="button" onclick="nextQuestion(4)">Weiter</button>
+        </div>
+
+        <div class="question" id="question4">
+          <p>4. Magst du Abenteuer oder Entspannung?</p>
+          <label
+            ><input type="radio" name="frage4" value="abenteuer" />
+            Abenteuer</label
+          >
+          <label
+            ><input type="radio" name="frage4" value="entspannung" />
+            Entspannung</label
+          >
+          <button type="button" onclick="calculateResult()">
+            Ergebnis anzeigen
+          </button>
+        </div>
+      </form>
+      <div class="result" id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
